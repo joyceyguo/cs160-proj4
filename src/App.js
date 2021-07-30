@@ -7,6 +7,7 @@ import { Route, Switch } from "react-router";
 import Welcome from "./Welcome";
 import SubmissionPage from "./SubmissionPage";
 import ShoutoutList from "./ShoutoutList";
+import AnonSubmissionPage from "./AnonSubmissionPage";
 
 const client = new W3CWebSocket("ws://127.0.0.1:8000");
 
@@ -41,8 +42,12 @@ function App() {
         <Welcome />
       </Route>
 
-      <Route path="/submission">
+      <Route path="/submit">
         <SubmissionPage ws={client} />
+      </Route>
+
+      <Route path="/anonsubmit">
+        <AnonSubmissionPage ws={client} />
       </Route>
 
       <Route path="/display">
