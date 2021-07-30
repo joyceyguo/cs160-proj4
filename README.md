@@ -1,3 +1,47 @@
+# Wall of Gratitude (CS160 su'21 project 4)
+
+Developers: Joyce Guo @joyceyguo, Vanshikha Sinha @vanshikha-s
+
+This repo contains both the server and the client for a simple platform for sharing appreciation. The platform is designed and developed as a submission for CS160 Summer 2021 Project 4.
+
+## First Time Setup
+
+You would need to install some dev tools and packages.
+After cloning the repository, run:
+
+```bash
+yarn install
+```
+
+If you run into issues when starting the app, additionally run:
+
+```bash
+npm install
+```
+
+Then you can start the server and the client in two separate terminals.
+To start the server, run:
+
+```bash
+node server.js
+```
+
+To start the create react app client, in a separate terminal, run:
+
+```bash
+yarn start
+```
+
+## App Navigation
+
+You will see the app deployed on `http://localhost:3000/`.
+
+Version A takes you to: `http://localhost:3000/submit`.
+
+Version B takes you to: `http://localhost:3000/anonsubmit`.
+
+The shared display board is located at: `http://localhost:3000/display`.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
