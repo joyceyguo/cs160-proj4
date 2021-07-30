@@ -5,7 +5,6 @@ import ShoutoutList from "./ShoutoutList";
 function SubmissionPage(props) {
   const { ws } = props;
 
-  const [shoutouts, setShoutouts] = useState([]);
   const [shoutout, setShoutout] = useState({});
 
   function handleChange(event) {
@@ -18,21 +17,21 @@ function SubmissionPage(props) {
 
   function onSubmit(event) {
     event.preventDefault();
-    ws.send(shoutout);
-    setShoutouts([...shoutouts, shoutout]);
+    console.log(JSON.stringify(shoutout));
+
+    ws.send(JSON.stringify(shoutout));
     setShoutout({});
     event.target.reset();
-    console.log(shoutouts);
   }
 
   return (
-    <div>
+    <div className="page-container">
+      <div className="header">WALL OF GRATITUDE</div>
       <div>
         <ShoutoutForm
           onSubmit={onSubmit}
           handleChange={handleChange}
           shoutout={shoutout}></ShoutoutForm>
-        <ShoutoutList shoutouts={shoutouts} />
       </div>
     </div>
   );

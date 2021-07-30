@@ -1,18 +1,18 @@
 import React from "react";
 import "./Shoutouts.css";
 
-
 function ShoutoutForm(props) {
   const { onSubmit, handleChange, shoutout } = props;
 
   return (
-    <div className='form-container'>
+    <div className="form-container">
       <form
         action=""
         id="shoutout"
         onSubmit={onSubmit}
         className="form"
         onChange={handleChange}>
+        <div className="prompt">Who do you want to appreciate today?</div>
         <input
           name="to"
           type="text"
@@ -20,13 +20,17 @@ function ShoutoutForm(props) {
           value={shoutout.to}
           className="single-line-text"
         />
+        <div className="prompt">Your Name?</div>
+
         <input
           name="from"
           type="text"
-          placeholder="Your Name"
+          placeholder=""
           value={shoutout.from}
           className="single-line-text"
         />
+        <div className="prompt">Type your shoutout below!</div>
+
         <textarea
           name="text"
           form="shoutout"
@@ -34,9 +38,7 @@ function ShoutoutForm(props) {
           placeholder="Thank you for..."
           value={shoutout.msg}
           className="multi-line-text"></textarea>
-        <div className="button-container">
-          <button className="button">Appreciate</button>
-        </div>
+        <button className="button">Appreciate!</button>
       </form>
     </div>
   );

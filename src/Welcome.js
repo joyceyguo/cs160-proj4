@@ -4,14 +4,17 @@ import "./Shoutouts.css";
 
 export default function Welcome() {
   return (
-    <div className="welcome">
-      <Link className="button" to="/shoutouts">
-        <div className="button-container">Version 1</div>
-      </Link>
+    <div className="page-container">
+      <div className="header">WALL OF GRATITUDE</div>
+      <div className="welcome">
+        <Link className="button" to="/submission">
+          <div className="button-container">Version A</div>
+        </Link>
 
-      <Link className="button" to="/shoutouts">
-        <div className="button-container">Version 2</div>
-      </Link>
+        <Link className="button" to="/submission">
+          <div className="button-container">Version B</div>
+        </Link>
+      </div>
     </div>
   );
 }
