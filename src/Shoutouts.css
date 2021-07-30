@@ -1,0 +1,80 @@
+.shoutout {
+  display: flex;
+  flex-direction: column;
+  width: 70vw;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+  background-color: #05b1d6;
+  color: white;
+  padding: 2vh 2vw;
+}
+
+.to,
+.from {
+  font-size: 2vh;
+  font-weight: 700;
+}
+
+.message {
+  font-size: 3.5vh;
+  font-weight: 400;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.single-line-text,
+.multi-line-text {
+  border: 2px solid;
+  border-radius: 10;
+  border-color: #05b1d6;
+  background-color: #f7f7f7;
+  padding: 0.5vh 0.5vw;
+  margin: 0.5vh 0.5vw;
+  color: #333333;
+  font-family: inherit;
+  font-size: 14;
+  font-weight: 500;
+  width: 70vw;
+}
+
+.multi-line-text {
+  height: 100px;
+  resize: none;
+}
+
+.button-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.button {
+  color: #fff;
+  background-color: #05b1d6;
+  border-color: transparent;
+  font-weight: 500;
+  border-radius: 6px;
+  height: 5vh;
+  width: 85px;
+  padding: 1vh 2vw;
+}
+
+.welcome {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 3vh 0;
+}
