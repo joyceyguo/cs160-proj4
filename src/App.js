@@ -14,25 +14,16 @@ const client = new W3CWebSocket("ws://127.0.0.1:8000");
 function App() {
   const [shoutouts, setShoutouts] = useState([]);
 
-  // useEffect(() => {
-  //   setShoutouts([...shoutouts, shoutout]);
-  //   console.log(shoutouts);
-  // });
-
   useEffect(() => {
     client.onopen = () => {
       console.log("WebSocket Client Connected");
     };
-    // client.onmessage = (message) => {
-    //   console.log(message);
-    // };
-
+    
     client.onmessage = function (receivedMessage) {
       console.log(receivedMessage);
       var received = JSON.parse(receivedMessage.data);
       console.log("Received: " + JSON.stringify(received));
       setShoutouts([...shoutouts, received]);
-      console.log(shoutouts);
     };
   });
 

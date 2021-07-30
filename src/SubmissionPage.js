@@ -17,7 +17,6 @@ function SubmissionPage(props) {
 
   function onSubmit(event) {
     event.preventDefault();
-    console.log(JSON.stringify(shoutout));
 
     ws.send(JSON.stringify(shoutout));
     setShoutout({});

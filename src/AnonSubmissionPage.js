@@ -9,7 +9,7 @@ function AnonSubmissionPage(props) {
 
   function handleChange(event) {
     const { value, name } = event.target;
-    if (name != "anonymous") {
+    if (name !== "anonymous") {
       setShoutout({
         ...shoutout,
         [name]: value,
@@ -24,8 +24,6 @@ function AnonSubmissionPage(props) {
 
   function onSubmit(event) {
     event.preventDefault();
-    console.log(JSON.stringify(shoutout));
-
     ws.send(JSON.stringify(shoutout));
     setShoutout({});
     event.target.reset();
