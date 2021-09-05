@@ -1,4 +1,4 @@
-# Wall of Gratitude (CS160 su'21 project 4)
+# Wall of Gratitude
 
 Developers: Joyce Guo @joyceyguo, Vanshikha Sinha @vanshikha-s
 
